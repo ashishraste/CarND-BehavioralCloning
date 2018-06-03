@@ -9,6 +9,7 @@ training_samples, validation_samples = train_test_split(samples, test_size=0.2)
 train_generator = model.image_generator(training_samples, batch_size=32)
 validation_generator = model.image_generator(validation_samples, batch_size=32)
 
+# Training the nVidia end-to-end model and evaluating it over validation set.
 model = model.get_nvidia_end_to_end_model()
 model.compile(optimizer='adam', loss='mse')
 history_obj = model.fit_generator(train_generator, samples_per_epoch=len(training_samples),
@@ -16,6 +17,7 @@ history_obj = model.fit_generator(train_generator, samples_per_epoch=len(trainin
                                   nb_epoch=3, verbose=1)
 model.save('model.h5')
 
+# Plotting mean-squared loss over training and validation sets.
 plt.plot(history_obj.history['loss'])
 plt.plot(history_obj.history['val_loss'])
 plt.title('Model mean squared error loss')
