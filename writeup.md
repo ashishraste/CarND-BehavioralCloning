@@ -1,26 +1,4 @@
-### Behavioral Cloning project
-
----
-
-In this project a Convolutional Neural Network (CNN) is used to clone and predict
-a car's steering angles based on images.
-
-Note: This project uses a Unity-based car simulator developed at Udacity Inc.
-and a dataset of images that is generated from it, none of which are included
-in this repository.
-
----
-
-#### Directory layout
-
-* scripts : Source containing the CNN model and training/data-loading routines.
-* images : Sample images used in this document.
-* drive.py : Udacity provided source to control/feed the steering-angles from a
-given trained-model, along with other parameters like throttle.
-* model.h5 : Trained CNN model using Keras.
-* video_track1.mp4 : Video recording of the car driving in autonomous mode on
-Track 1 of the simulator.
-
+### Project Writeup
 
 #### Project Goals
 
@@ -122,8 +100,7 @@ is used as the cost function.
 * Adam optimizer is used to optimize the cost function, leaving us to just tune
 the number of epochs.
 
-* The model is trained over 3 epochs. For each epoch, images are supplied to
-the network in batches of size 32. 
+* The model is trained over 3 epochs.
 
 * During the training phase, a prediction accuracy of ~ 99.987 % over the validation
 set is obtained.
@@ -138,7 +115,7 @@ otherwise.
 
 ##### Testing routine
 
-![autnomous-run-gif](https://media.giphy.com/media/g0QiDHenXzPUalydqC/giphy.gif)
+![autnomous-run-gif]()
 
 * To test the trained model, the simulator was initialized in autonomous mode.
 Using the provided `drive.py` script, the car received steering and throttle commands.
