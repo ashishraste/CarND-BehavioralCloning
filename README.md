@@ -37,7 +37,7 @@ from images.
 
 #### Data collection
 
-![collection-gif](https://media.giphy.com/media/2tOTDTtXM1jbXunIay/giphy.gif)
+<img src="images/data_collection.gif?raw=true">
 
 Training data for predicting the steering-angles was collected using the simulator.
 Three laps on Track 1 was run in the desired direction. It was noted that the
@@ -123,7 +123,7 @@ is used as the cost function.
 the number of epochs.
 
 * The model is trained over 3 epochs. For each epoch, images are supplied to
-the network in batches of size 32. 
+the network in batches of size 32.
 
 * During the training phase, a prediction accuracy of ~ 99.987 % over the validation
 set is obtained.
@@ -138,7 +138,7 @@ otherwise.
 
 ##### Testing routine
 
-![autnomous-run-gif](https://media.giphy.com/media/g0QiDHenXzPUalydqC/giphy.gif)
+<img src="images/autonomous_run.gif?raw=true">
 
 * To test the trained model, the simulator was initialized in autonomous mode.
 Using the provided `drive.py` script, the car received steering and throttle commands.
